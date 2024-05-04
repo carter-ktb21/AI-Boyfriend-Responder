@@ -1,1 +1,43 @@
-{}
+{
+  "api": {
+    "api6132532b": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "geminiapitestc66932a4"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "geminiapitestc66932a4": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_geminiapitestc66932a4_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "geminiapitestc66932a4"
+        }
+      ]
+    },
+    "AMPLIFY_function_geminiapitestc66932a4_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "geminiapitestc66932a4"
+        }
+      ]
+    }
+  }
+}
