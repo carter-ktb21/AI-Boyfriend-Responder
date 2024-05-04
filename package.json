@@ -1,0 +1,10 @@
+{
+  "name": "gemini-api-test",
+  "version": "1.0.0",
+  "description": "gemini api test",
+  "scripts": {
+    "start": "concurrently \"npm:dev --prefix frontend\" \"npm:start --prefix backend\""
+  },
+  "author": "",
+  "license": "ISC"
+}
