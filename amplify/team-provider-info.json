@@ -10,17 +10,6 @@
       "StackName": "amplify-geminiapitest-dev-89190",
       "StackId": "arn:aws:cloudformation:us-east-1:818383124701:stack/amplify-geminiapitest-dev-89190/72b50770-0a51-11ef-88cf-0ec80bfc83a5",
       "AmplifyAppId": "d1o60h490665in"
-    },
-    "categories": {
-      "function": {
-        "geminiapitestc66932a4": {
-          "deploymentBucketName": "amplify-geminiapitest-dev-89190-deployment",
-          "s3Key": "amplify-builds/geminiapitestc66932a4-4e6d56736b46702f5472-build.zip"
-        }
-      },
-      "api": {
-        "api6132532b": {}
-      }
     }
   }
 }
