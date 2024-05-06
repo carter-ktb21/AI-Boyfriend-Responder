@@ -1,13 +1,16 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors'); // Import cors
-const { GoogleGenerativeAI } = require('@google/generative-ai');
+const { GoogleGenerativeAI, HarmBlockThreshold, HarmCategory } = require('@google/generative-ai');
 
 const app = express();
 const apiKey = process.env.API_KEY; // Retrieve API key from environment variable
 
 const genAI = new GoogleGenerativeAI(apiKey);
-const model = genAI.getGenerativeModel({ model: 'gemini-pro' });
+const model = genAI.getGenerativeModel({ model: 'gemini-pro', safetySettings: [{
+  category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
+  threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH
+}]});
 
 // Enable All CORS Requests
 app.use(cors());
@@ -17,7 +20,9 @@ app.get('/generateContent', async (req, res) => {
     console.log('Received request to generate content with prompt:', prompt); // Log the prompt
   
     try {
-      const result = await model.generateContent(prompt);
+      const result = await model.generateContent(
+        prompt
+      );
       if (!result.response) {
         throw new Error('Response is undefined');
       }

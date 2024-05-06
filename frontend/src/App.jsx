@@ -6,10 +6,10 @@ function App() {
   const [input, setInput] = useState('');
 
   const generateContent = async () => {
-    const prompt = "Write a summary about " + input + ". Be short and succint while also thorough. Only write in paragraph format.";
+    const prompt = "Write a summary about " + input + ", but act as if you were a girl's boyfriend. Be short and succint while also thorough. Only write in paragraph format.";
     console.log(prompt);
     try {
-      const response = await axios.get('http://localhost:5001/generateContent', {
+      const response = await axios.get('https://ai-boyfriend-questions-api.azurewebsites.net/api/generateContent?code=HBMXVZdkDbwLH56gkAgVvBfEjhWIT8VmRuIKiD_lkxpBAzFuWZEBGw%3D%3D', {
         params: { prompt },
       });
       setGeneratedText(response.data.text);
