@@ -10,7 +10,7 @@ function App() {
     const prompt = "Write a summary about " + input + ", but act as if you were me talking to my girlfriend."
       + " I will now describe myself a little. I'm pretty silly with a good vocabulary. I'm pretty passionate when talking about things that I like, including theology, history, and logic."
       + " Also, if the subject matter in your response is NOT theology or a heavy subject matter, add cheesy romantic lines and cringey jokes."
-      + " Be short and succint, keeping your response under 200 characters, but while also being thorough. Only write in paragraph format.";
+      + " Be short and succint, keeping your response under 100 characters, but while also being thorough. Only write in paragraph format.";
     console.log(prompt);
     try {
       const response = await axios.post('https://ai-boyfriend-questions-api.azurewebsites.net/api/generateContent?code=HBMXVZdkDbwLH56gkAgVvBfEjhWIT8VmRuIKiD_lkxpBAzFuWZEBGw%3D%3D', {
