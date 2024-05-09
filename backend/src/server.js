@@ -13,7 +13,7 @@ const apiKey = process.env.API_KEY; // Retrieve API key from environment variabl
 const genAI = new GoogleGenerativeAI(apiKey);
 const model = genAI.getGenerativeModel({ model: 'gemini-pro', safetySettings: [{
   category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
-  threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH
+  threshold: HarmBlockThreshold.BLOCK_ONLY_HIGH // Neccessary to allow the AI to act as if it were a boyfriend
 }]});
 
 // Enable All CORS Requests
